@@ -19,10 +19,32 @@
 
 
 <p id="result"></p>
+<br>
+<div>
+    <img id="myImg" src="Images/Paper wasp.jpg" width="100" height="100" onclick="swapImage()">
+</div>
 
 <script> 
 correct=0;
 wrong=0;
+useImage=1;
+
+function swapImage() {
+switch(useImage) {
+    case 1:
+        document.getElementById("myImg").src =  "Images/Butterfly.jpg";
+        useImage=2;
+        break;
+    case 2:
+        document.getElementById("myImg").src =  "Images/Owlfly.jpg";
+        useImage=3;
+        break;
+    case 3:
+        document.getElementById("myImg").src =  "Images/Paper wasp.jpg";
+        useImage=1;
+        break;
+}
+}
 
 function checkGuess(){
     console.log("Getting form values")
