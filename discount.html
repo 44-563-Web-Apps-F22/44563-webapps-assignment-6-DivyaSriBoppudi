@@ -19,8 +19,34 @@
 
 
 <p id="result">This result will be displayed here...</p>
+<br>
+<form>
+    <input type="radio" id="rg1_times" name="choose_options" value="times" onclick="chooseOp()">
+    <label for="rg1_times">*</label><br>
 
+    <input type="radio" id="rg1_divide" name="choose_options" value="divide" onclick="chooseOp()">
+    <label for="rg1_divide">/</label><br>
+
+    <input type="radio" id="rg1_exponent" name="choose_options" value="exponent" onclick="chooseOp()">
+    <label for="rg1_exponent">**</label><br>
+</form>
+<p id="result_radio">Result for the selected operation will be displayed here...</p>
 <script> 
+function chooseOp() {
+    amount = document.getElementById("base_amount").value
+    discount_value = document.getElementById("discount_value").value
+    operation = document.getElementsByName("choose_options")
+    out = document.getElementById("result_radio")
+    var value;
+    if(operation[0].checked) {
+        value = amount+ " * " +discount_value+" is : "+ amount * discount_value;
+    } else if(operation[1].checked) {
+        value = amount+ " / " +discount_value+" is : "+amount / discount_value;
+    } else if(operation[2].checked) {
+        value = amount+ " ^ " +discount_value+" is : "+amount ** discount_value;
+    }
+    out.innerHTML = value;
+}
 
 function discount (){
     amount = document.getElementById("base_amount").value
