@@ -14,26 +14,26 @@
 
      </head>
 <body  class="p-3 mb-2 bg-light text-dark text-center">
-<h1>Divya sri computes discounts</h1>
+<h1 class="text-primary">Divya sri computes discounts</h1>
 <h2 class="fst-italic">Getting input</h2>
 
 <div class="container ">
 <form class="mt-3 mb-3 form-control border border-info">
-    <label class="mb-4" for="base_amount">Enter base amount</label>
+    <label class="mt-4 mb-4" for="base_amount">Enter base amount</label>
     <input type ="number" id="base_amount" name="amount" value=20> <br>
 
     <label class="mb-4" for="discount_value">Enter the discount percentage</label>
     <input type ="number" id="discount_value" name="discount_amount" value=10> <br>
 
-    <input class="btn btn-warning" type="button" onclick="discount()" value="Apply discount">
+    <input class="btn btn-warning mb-4" type="button" onclick="discount()" value="Apply discount">
 </form>
 
 <p class="text-danger" id="result">This result will be displayed here...</p>
 </div>
 <br>
 <div class="container">
-<form class="form-check border border-warning">
-    <input class="mb-4" type="radio" id="rg1_times" name="choose_options" value="times" onclick="chooseOp()">
+<form class="form-check border border-warning  text-start">
+    <input class="mt-4 mb-4" type="radio" id="rg1_times" name="choose_options" value="times" onclick="chooseOp()">
     <label for="rg1_times">*</label><br>
 
     <input class="mb-4" type="radio" id="rg1_divide" name="choose_options" value="divide" onclick="chooseOp()">
@@ -42,7 +42,7 @@
     <input class="mb-4" type="radio" id="rg1_exponent" name="choose_options" value="exponent" onclick="chooseOp()">
     <label for="rg1_exponent">**</label><br>
 </form>
-<p class="text-primary" id="result_radio">Result for the selected operation will be displayed here...</p>
+<p class="text-dark" id="result_radio">Result for the selected operation will be displayed here...</p>
 </div>
 <script> 
 function chooseOp() {
