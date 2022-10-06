@@ -2,39 +2,51 @@
 <html>
  <head>
     <title>Vacation Plan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
  </head>
-<body>
-<h1>Divya sri selects a vacation</h1>
+<body class="p-3 mb-2 bg-secondary text-dark text-center">
+<h1 class="text-danger">Divya sri selects a vacation</h1>
 <br>
-<form>
-<input type="checkbox" id="air" name="transport" value="True">
+<div class="container ">
+<form class="mt-3 mb-3 form-control form-check border border-primary text-start">
+<input class="mt-4 mb-4" type="checkbox" id="air" name="transport" value="True">
 <label for="air">Travel by Air</label></br>
 
-<input type="checkbox" id="domestic" name="reservation" value="True">
+<input class="mb-4" type="checkbox" id="domestic" name="reservation" value="True">
 <label for="domestic">Domestic</label></br>
 
-<input type="checkbox" id="resort" name="accomodation" value="False">
+<input class="mb-4" type="checkbox" id="resort" name="accomodation" value="False">
 <label for="resort">Resort</label></br>
 
-<input type="button" value="Select a vacation" onclick="selectVacation()">
+<input class="mb-4 text-center btn btn-primary" type="button" value="Select a vacation" onclick="selectVacation()">
 </form>
-<p id="result_checkbox">The result for vacation planning will display here...</p>
+<p class="text-warning" id="result_checkbox">The result for vacation planning will display here...</p>
+</div>
 <br>
-<h2>Getting input</h2>
+<h2 class="text-info">Update vacation Information</h2>
 
-<form>
-    <label for="city">Enter a city</label>
+<div class="container ">
+<form class="mt-3 mb-3 form-control border border-info">
+    <label class="mt-4 mb-4" for="city">Enter a city</label>
     <input type ="text" id="city" name="name_of_name" value="city"> <br>
 
-    <label for="price">Enter price</label>
+    <label class="mb-4" for="price">Enter price</label>
     <input type ="text" id="price" name="vacation_price"> <br>
 
-    <input type="button" onclick="updateVacation()" value="Update the vacation">
+    <input  class="btn btn-warning mb-4" type="button" onclick="updateVacation()" value="Update the vacation">
 </form>
 
-
-<p id="result">This text will be replaced </p>
-
+<p class="text-warning" id="result">This text will be replaced </p>
+</div>
 <script> 
 my_vacation = {}
 
