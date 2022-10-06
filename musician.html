@@ -14,7 +14,7 @@
     <label for="guess_musician">Guess the musician</label>
     <input type ="text" id="guess_musician"> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess">
+    <input type="button" id="check_guess" onclick="checkGuess()" value="Check the guess">
 </form>
 
 
@@ -46,6 +46,8 @@ switch(useImage) {
 }
 }
 
+countWrong=0
+
 function checkGuess(){
     console.log("Getting form values")
     secret_musician = document.getElementById("musician_name").value
@@ -54,14 +56,25 @@ function checkGuess(){
     out = document.getElementById("result")    
     if(secret_musician === guess){
         correct += 1;
+        countWrong =0
         out.innerHTML = "Correct: "+correct+", Wrong: "+wrong;
         alert("You got it right");
     } else {
         wrong += 1;
+        countWrong++;
+        
         out.innerHTML = "Correct: "+correct+", Wrong: "+wrong;
         alert("Wrong Musician");
     }
+    if(countWrong == 3) {
+        document.getElementById("check_guess").onclick = gameOver;
+    }
 }
+
+function gameOver() {
+alert("Sorry, game over.");
+}
+
 </script>
 
 </body>
